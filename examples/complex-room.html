@@ -1,0 +1,81 @@
+<!doctype html>
+<!--
+Copyright 2017 Google Inc. All Rights Reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied. See the License for the specific
+language governing permissions and limitations under the License.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complex Room Architecture Example - Resonance Audio</title>
+  <link rel="stylesheet" href="resources/css/example.css">
+</head>
+<body>
+  <h1>Complex Room Architecture Example</h1>
+  <p>
+    This example demonstrates the ComplexRoom feature for modeling
+    complex architectures such as churches or concert halls with
+    multiple interconnected acoustic zones.
+  </p>
+
+  <div class="control-panel">
+    <h2>Architecture</h2>
+    <select id="architectureSelect">
+      <option value="church">Church (Nave + Chapel)</option>
+      <option value="concerthall">Concert Hall (Stage + Audience + Balcony)</option>
+      <option value="cathedral">Cathedral (Multiple Spaces)</option>
+    </select>
+
+    <h2>Audio Source</h2>
+    <button id="playButton">Play</button>
+    <label>
+      Position X: <input type="range" id="sourceX" min="-20" max="20" value="0" step="0.5">
+      <span id="sourceXValue">0</span>m
+    </label>
+    <label>
+      Position Y: <input type="range" id="sourceY" min="-5" max="10" value="0" step="0.5">
+      <span id="sourceYValue">0</span>m
+    </label>
+    <label>
+      Position Z: <input type="range" id="sourceZ" min="-20" max="20" value="0" step="0.5">
+      <span id="sourceZValue">0</span>m
+    </label>
+
+    <h2>Listener</h2>
+    <label>
+      Position X: <input type="range" id="listenerX" min="-20" max="20" value="5" step="0.5">
+      <span id="listenerXValue">5</span>m
+    </label>
+    <label>
+      Position Y: <input type="range" id="listenerY" min="-5" max="10" value="0" step="0.5">
+      <span id="listenerYValue">0</span>m
+    </label>
+    <label>
+      Position Z: <input type="range" id="listenerZ" min="-20" max="20" value="-10" step="0.5">
+      <span id="listenerZValue">-10</span>m
+    </label>
+
+    <h2>Current Zone</h2>
+    <div id="currentZone">N/A</div>
+
+    <h2>Room Information</h2>
+    <div id="roomInfo">
+      <p>Total Zones: <span id="totalZones">0</span></p>
+      <p>Total Portals: <span id="totalPortals">0</span></p>
+    </div>
+  </div>
+
+  <script src="../build/resonance-audio.js"></script>
+  <script src="resources/js/complex-room-example.js"></script>
+</body>
+</html>

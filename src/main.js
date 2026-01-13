@@ -38,3 +38,8 @@ exports.ResonanceAudio.Source = require('./source.js');
 exports.ResonanceAudio.Tables = require('./tables.js');
 exports.ResonanceAudio.Utils = require('./utils.js');
 exports.ResonanceAudio.Version = require('./version.js');
+
+// Complex room architecture support.
+exports.ResonanceAudio.ComplexRoom = require('./complex-room.js');
+exports.ResonanceAudio.ComplexRoomGeometry =
+    require('./complex-room-geometry.js');
